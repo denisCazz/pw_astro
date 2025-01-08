@@ -1,0 +1,32 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import '../styles/tailwind.css';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<Navbar />
+	<h1 class="text-4xl font-bold text-center mt-8">I report di sostenibilità</h1>
+	<p class="text-center mt-4">In questa sezione capirai a cosa sercono i report di sostenibilità delle aziende</p>
+	<div class="container mx-auto mt-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+			<div class="bg-white p-4 shadow-md">
+				<h2 class="text-2xl font-bold">Cos'è un report di sostenibilità?</h2>
+				<p class="mt-4">Il report di sostenibilità è un documento che le aziende pubblicano per comunicare ai propri stakeholder le azioni intraprese per ridurre l'impatto ambientale e sociale delle proprie attività.</p>
+			</div>
+			<div class="bg-white p-4 shadow-md">
+				<h2 class="text-2xl font-bold">Quali sono i vantaggi di un report di sostenibilità?</h2>
+				<p class="mt-4">I vantaggi di un report di sostenibilità sono molteplici: permette di migliorare la reputazione aziendale, di attrarre investitori e di rispondere alle richieste dei consumatori sempre più attenti all'impatto ambientale e sociale delle aziende.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- cta alla home page per provare i download -->
+	<div class="text-center mt-8">
+		<a href="/" class="bg-blue-600 text-white px-4 py-2 rounded-md">Torna alla home page e scarica tu stesso un report</a>
+	</div>
+
+</Layout>

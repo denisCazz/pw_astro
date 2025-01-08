@@ -1,0 +1,35 @@
+---
+// Importa Tailwind CSS
+import '../styles/tailwind.css';
+---
+
+<header class="bg-white shadow-md">
+  <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-blue-600">
+      <a href="/">Project Work - astro</a>
+    </div>
+
+    <!-- Menu principale -->
+    <ul class="hidden md:flex space-x-6">
+      <li>
+        <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
+      </li>
+      <li>
+        <a href="/report" class="text-gray-700 hover:text-blue-600">I report</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Menu mobile (visibile solo su schermi piccoli) -->
+  <div class="md:hidden">
+    <ul class="bg-white px-6 py-4 space-y-4">
+      <li>
+        <a href="/" class="block text-gray-700 hover:text-blue-600">Home</a>
+      </li>
+      <li>
+        <a href="/report" class="block text-gray-700 hover:text-blue-600">I report</a>
+      </li>
+    </ul>
+  </div>
+</header>

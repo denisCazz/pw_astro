@@ -1,11 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <Navbar />
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Download Report di Sostenibilità</h1>
+    <select id="year-select" class="block w-full p-2 border border-gray-300 rounded-md mb-6">
+      <option value="">Seleziona un anno</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+    </select>
+    <div id="output">
+      <p class="text-gray-600">Seleziona un anno per visualizzare il report.</p>
+    </div>
+  </div>
+  <script src="../../src/scripts/report-selector.js" type="module"></script>
 </Layout>
