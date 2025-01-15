@@ -112,4 +112,4 @@ const availableYears = [2022, 2023, 2024]; // Aggiunto l'anno 2024
 ### Funzionalità nascosta intrinsica al framework
 
 E' stata predisposta una pagina custom 404, se si vuole provare si puo provare a puntare una volta avviato il progetto
-a questo (link)[localhost:4321/test404].
+a questo [link](localhost:4321/test404).
