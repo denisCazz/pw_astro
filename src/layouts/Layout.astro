@@ -1,16 +1,86 @@
 ---
 import '../styles/tailwind.css';
 ---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>PW - Astro</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>PW - Astro</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navbar -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-green-800">
+          <a href="/" class="flex items-center">
+            <img src="logo.png" alt="Logo UniPegaso" class="h-10 w-auto bg-white rounded p-1 mr-2">
+            Project Work - Astro
+          </a>
+        </div>
+
+        <!-- Menu principale -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="#projectDescr" class="text-gray-700 hover:text-green-600 transition-colors">Descrizione Progetto</a>
+          </li>
+          <li>
+            <a href="#reportDescr" class="text-gray-700 hover:text-green-600 transition-colors">Descrizione Report</a>
+          </li>
+          <li>
+            <a href="#aboutLavazza" class="text-gray-700 hover:text-green-600 transition-colors">Informazioni su Lavazza</a>
+          </li>
+          <li>
+            <a href="/report" class="text-gray-700 hover:text-green-600 transition-colors">I report</a>
+          </li>
+        </ul>
+
+        <!-- Bottone per il menu mobile -->
+        <button class="md:hidden text-gray-700 focus:outline-none" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Menu mobile (visibile solo su schermi piccoli) -->
+      <div class="md:hidden hidden bg-white px-6 py-4 space-y-4" id="mobile-menu">
+        <a href="#projectDescr" class="block text-gray-700 hover:text-green-600 transition-colors">Descrizione Progetto</a>
+        <a href="#reportDescr" class="block text-gray-700 hover:text-green-600 transition-colors">Descrizione Report</a>
+        <a href="#aboutLavazza" class="block text-gray-700 hover:text-green-600 transition-colors">Informazioni su Lavazza</a>
+        <a href="/report" class="block text-gray-700 hover:text-green-600 transition-colors">I report</a>
+      </div>
+    </header>
+
+    <!-- Contenuto principale -->
+    <main class="pt-20">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-4 mt-8">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-sm">
+          Questa pagina è stata creata da Denis Cazzulo, matricola 0312201729.
+        </p>
+        <p class="text-sm mt-2">
+          Fonti dati: 
+          <a href="https://www.alimentinews.it/tecnologia/bevande/1154-lavazza-conferma-la-sua-strategia-di-sviluppo-sostenibile" target="_blank" class="underline hover:text-green-300">Alimenti News, numeri di Lavazza</a>,
+          <a href="https://www.lavazza.it/it" target="_blank" class="underline hover:text-green-300">Lavazza</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Script per il menu mobile -->
+    <script>
+      document.getElementById('mobile-menu-button')?.addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
 </html>

@@ -2,31 +2,64 @@
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/tailwind.css';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Navbar />
-	<h1 class="text-4xl font-bold text-center mt-8">I report di sostenibilità</h1>
-	<p class="text-center mt-4">In questa sezione capirai a cosa sercono i report di sostenibilità delle aziende</p>
-	<div class="container mx-auto mt-8">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			<div class="bg-white p-4 shadow-md">
-				<h2 class="text-2xl font-bold">Cos'è un report di sostenibilità?</h2>
-				<p class="mt-4">Il report di sostenibilità è un documento che le aziende pubblicano per comunicare ai propri stakeholder le azioni intraprese per ridurre l'impatto ambientale e sociale delle proprie attività.</p>
-			</div>
-			<div class="bg-white p-4 shadow-md">
-				<h2 class="text-2xl font-bold">Quali sono i vantaggi di un report di sostenibilità?</h2>
-				<p class="mt-4">I vantaggi di un report di sostenibilità sono molteplici: permette di migliorare la reputazione aziendale, di attrarre investitori e di rispondere alle richieste dei consumatori sempre più attenti all'impatto ambientale e sociale delle aziende.</p>
-			</div>
-		</div>
-	</div>
+  <Navbar />
 
-	<!-- cta alla home page per provare i download -->
-	<div class="text-center mt-8">
-		<a href="/" class="bg-blue-600 text-white px-4 py-2 rounded-md">Torna alla home page e scarica tu stesso un report</a>
-	</div>
+  <!-- Hero Section -->
+  <section class="bg-green-50 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-green-900 mb-6">
+        I Report di Sostenibilità
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700">
+        Scopri l'importanza dei report di sostenibilità e come le aziende comunicano il loro impegno per un futuro più green.
+      </p>
+    </div>
+  </section>
 
+  <!-- Sezione Informazioni -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1: Cos'è un report di sostenibilità -->
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <div class="text-center">
+          <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-green-900 mt-6 mb-4">Cos'è un report di sostenibilità?</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Il report di sostenibilità è un documento che le aziende pubblicano per comunicare ai propri stakeholder le azioni intraprese per ridurre l'impatto ambientale e sociale delle proprie attività.
+        </p>
+      </div>
+
+      <!-- Card 2: Vantaggi di un report di sostenibilità -->
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <div class="text-center">
+          <svg class="w-12 h-12 mx-auto text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-green-900 mt-6 mb-4">Quali sono i vantaggi?</h2>
+        <p class="text-gray-700 leading-relaxed">
+          I vantaggi di un report di sostenibilità sono molteplici: migliora la reputazione aziendale, attira investitori e risponde alle richieste dei consumatori sempre più attenti all'impatto ambientale e sociale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-green-50 py-12">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Vuoi saperne di più?</h2>
+      <p class="text-lg text-gray-700 mb-8">
+        Torna alla home page e scarica tu stesso un report di sostenibilità per scoprire come le aziende stanno lavorando per un futuro più sostenibile.
+      </p>
+      <a href="/" class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition-colors">
+        Torna alla Home Page
+      </a>
+    </div>
+  </section>
 </Layout>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const availableYears = [];
+  const availableYears = [2022,2023];
   const selectElement = document.querySelector('#year-select');
   const outputElement = document.querySelector('#output');
 
